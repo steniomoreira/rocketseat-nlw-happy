@@ -10,6 +10,7 @@ import mapMarkerImg from '../images/map-marker.svg';
 import '../styles/pages/orphanages-map.css';
 
 function OrphanagesMaps() {
+
     return (
         <div id="page-map">
             <aside>
@@ -27,12 +28,12 @@ function OrphanagesMaps() {
             </aside>
 
             <Map 
-                center={[-3.7900894, -38.6590335]}
+                center={[-3.6986316,-38.6415447]}
                 zoom={11}
                 style={{ width: '100%', height: '100%' }}                
             >
                 <TileLayer
-                    url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                    url={`${process.env.REACT_APP_API_MAP}${process.env.REACT_APP_MAPBOX_TOKEN}`}
                 />
             </Map>
 
